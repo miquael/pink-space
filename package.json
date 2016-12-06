@@ -1,0 +1,28 @@
+{
+  "name": "oa-bodai-vr",
+  "description": "OA-BodAI-VR",
+  "author": "Michael Gaio - www.michaelgaio.com",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo --live --verbose --port 3000 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "budo": "^7.0.0"
+  },
+  "keywords": [
+    "open-assistant",
+    "bodai",
+    "3d",
+    "vr",
+    "webvr",
+    "aframe",
+    "aframe-example",
+    "aframe-boilerplate",
+    "aframe-scene"
+  ]
+}
