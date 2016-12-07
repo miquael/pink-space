@@ -42,6 +42,11 @@
             <!-- Environment -->
             <img id="cresent-moon" src="images/environment/cresent-moon.png">
 
+            <!-- Models -->
+            <a-asset-item id="angel-obj" src="models/Stanford_Lucy_Angel.obj"></a-asset-item>
+
+
+
             <!-- Templates ///////////////////////////////////////////////////// -->
 
             <!-- Voxy Box template -->
@@ -171,6 +176,9 @@
             </a-curvedimage>-->
         </a-entity>
 
+
+        <a-entity position="0 0 -5" scale="0.025 0.025 0.025" obj-model="obj: #angel-obj" color="#FF99CC"></a-entity>
+
         <!-- ENVIRONMENT /////////////////////////////////////////////////////// -->
 
         <!-- Sky -->
@@ -181,10 +189,10 @@
         <!-- Moon -->
         <a-plane position="27 38 -82" height="11" width="11" opacity="0.33" src="#cresent-moon" look-at="[camera]"></a-plane>
 
-        <!-- Lighting -->
+        <!-- Lighting-->
         <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
         <a-light color="#ddf" position="3 5 -10" distance="50" intensity="0.4" type="point"></a-light>
-        <a-light color="#ddeeff" type="ambient"></a-light>
+        <a-light color="#EE88CC" type="ambient"></a-light>
 
         <!-- Grid - 275 x 275 -->
         <a-grid static-body
