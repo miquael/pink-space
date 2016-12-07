@@ -115,7 +115,7 @@
                   kinematic-body
                   jump-ability
                   universal-controls>
-                  <!-- 
+                  <!--
                   <a-cursor id="cursor" color="#2E3A87">
                       <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
                       <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
@@ -137,8 +137,8 @@
 
         <!-- CONTENT /////////////////////////////////////////////////////////// -->
 
-        <!-- Temple -->
-        <a-entity position="0 0.5 -4">
+        <!-- Temple
+        <a-entity position="-7 0.5 -6" rotation="0 45 0">
             <a-entity template="src: #voxy-box" data-texture="#vox-pnk" position="0 1 0"></a-entity>
 
             <a-entity template="src: #voxy-box" data-texture="#vox-pnk" position="1 0 0"></a-entity>
@@ -147,6 +147,28 @@
             <a-entity template="src: #voxy-box" data-texture="#vox-pnk" position="0 0 1"></a-entity>
             <a-entity template="src: #voxy-box" data-texture="#vox-pnk" position="0 0 -1"></a-entity>
 
+        </a-entity>-->
+
+        <!-- Pillars -->
+        <a-entity position="0 0 -10">
+            <a-sphere position="0 5 0" radius="1.75" color="#FF99CC" material="shader: flat; roughness: 1; metalness: 0"></a-sphere>
+            <a-cylinder position="0 2.5 0" radius="1.75" height="5" color="#FF99CC" material="shader: flat; roughness: 1; metalness: 0"></a-cylinder>
+
+            <a-sphere position="3.5 2.5 -0.75" radius="1.25" color="#FF99CC" material="shader: flat"></a-sphere>
+            <a-cylinder position="3.5 0 -0.75" radius="1.25" height="5" color="#FF99CC" material="shader: flat"></a-cylinder>
+
+            <a-sphere position="-3.75 3.5 -0.5" radius="1.5" color="#FF99CC" material="shader: flat"></a-sphere>
+            <a-cylinder position="-3.75 1 -0.5" radius="1.5" height="5" color="#FF99CC" material="shader: flat"></a-cylinder>
+            <!--
+            <a-curvedimage material="shader: flat; src: #GAIO_banner" position="0 6 0" height="3" radius="3.5" theta-length="72" scale="1 1 1">
+                     <a-animation attribute="rotation"
+                        dur="20000"
+                        fill="forwards"
+                        to="0 360 0"
+                        easing="linear"
+                        repeat="indefinite">
+                    </a-animation>
+            </a-curvedimage>-->
         </a-entity>
 
         <!-- ENVIRONMENT /////////////////////////////////////////////////////// -->
@@ -154,17 +176,15 @@
         <!-- Sky -->
         <a-entity   id="sky"
                     geometry="primitive: sphere; radius: 100;"
-                    material="shader: skyGradient; side: back; colorTop: #FF99CC; colorBottom: #FFCCFF;"></a-entity>
+                    material="shader: skyGradient; side: back; colorTop: #FF99DD; colorBottom: #FFCCFF;"></a-entity>
 
         <!-- Moon -->
-        <a-plane position="22 37 -82" height="11" width="11" opacity="0.33" src="#cresent-moon" look-at="[camera]"></a-plane>
+        <a-plane position="27 38 -82" height="11" width="11" opacity="0.33" src="#cresent-moon" look-at="[camera]"></a-plane>
 
-        <!-- Lighting
-        <a-light color="#ddeeff" type="ambient"></a-light> -->
-        <!--
-        <a-light color="#dde" type="point" distance="100" intensity="0.4"></a-light> -->
-        <!--
-        <a-light color="#ddf" type="point" position="5 5 -20" distance="50" intensity="0.1"></a-light> -->
+        <!-- Lighting -->
+        <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
+        <a-light color="#ddf" position="3 5 -10" distance="50" intensity="0.4" type="point"></a-light>
+        <a-light color="#ddeeff" type="ambient"></a-light>
 
         <!-- Grid - 275 x 275 -->
         <a-grid static-body
